@@ -8,7 +8,11 @@ import pandas as pd
 def helloworld():
     print('Hello World.  Today is a good day to code.')
 
+def get_dataframe_unique_tokens(List_uniqueTokens):
+    df = pd.DataFrame(List_uniqueTokens)
+    df_set_index = df.set_index(0)
     
+    return df_set_index
 
 def clean_text_4_classification_remove_backslashes(Text_file):
     '''The purpose of this function is to clean the text files of numerous instances of backslashes 
